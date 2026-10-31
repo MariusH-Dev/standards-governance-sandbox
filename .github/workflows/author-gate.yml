@@ -1,0 +1,15 @@
+name: author-gate
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize, ready_for_review]
+permissions: {}
+jobs:
+  author-gate:
+    name: author-gate
+    runs-on: ubuntu-latest
+    steps:
+      - name: PR author is the implementation App
+        env:
+          AUTHOR: ${{ github.event.pull_request.user.login }}
+          EXPECTED: standards-sandbox-impl-ddf0[bot]
+        run: test "$AUTHOR" = "$EXPECTED"
