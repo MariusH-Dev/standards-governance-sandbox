@@ -3,7 +3,7 @@
     "target": "es2023",
     "module": "esnext",
     "moduleResolution": "bundler",
-    "strict": false,
+    "strict": true,
     "noEmit": true,
     "skipLibCheck": false,
     "types": []
