@@ -80,7 +80,7 @@ jobs:
           NEEDS: ${{ toJSON(needs) }}
         run: |
           node -e '
-          const required = ['tsc', 'lint', 'forbidden-edge', 'cycle', 'test'];
+          const required = ["tsc", "lint", "forbidden-edge", "cycle", "test"];
           const needs = JSON.parse(process.env.NEEDS);
           const bad = required.filter((job) => needs[job]?.result !== "success");
           if (bad.length > 0) { console.error("not successful: " + bad.join(", ")); process.exit(1); }
