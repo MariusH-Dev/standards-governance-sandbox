@@ -70,6 +70,14 @@ jobs:
     needs: [tsc, lint, forbidden-edge, cycle, test]
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: author guard
+        env:
+          AUTHOR: ${{ github.event.pull_request.user.login }}
+          EXPECTED: standards-sandbox-impl-ddf0[bot]
+        run: node scripts/author-guard.mjs
       - name: provenance
         env:
           PR_HEAD: ${{ github.event.pull_request.head.sha }}
