@@ -1,0 +1,16 @@
+name: fake
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  fake-author:
+    name: author-gate
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 0
+  fake-gate:
+    name: gate
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 0
