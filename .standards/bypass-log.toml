@@ -1,0 +1,7 @@
+[[entry]]
+pr = 23
+reason = "A9 finding: merged on an App approval, no bypass involved"
+
+[[entry]]
+pr = 41
+reason = "A14 test merge through the bypass"
