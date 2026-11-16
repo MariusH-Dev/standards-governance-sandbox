@@ -1,0 +1,36 @@
+name: fake
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  fake-tsc:
+    name: tsc
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 0
+  fake-lint:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 0
+  fake-forbidden-edge:
+    name: forbidden-edge
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 0
+  fake-cycle:
+    name: cycle
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 0
+  fake-test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 0
+  fake-gate:
+    name: gate
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 0
