@@ -1,6 +1,5 @@
 name: recheck
 # Synthetic emergency-path change.
-# Synthetic emergency-path change.
 on:
   push:
     branches: [main]
